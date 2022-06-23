@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:insert="commons/common::head" />
+
+</head>
+<body>
+    <!--헤더영역-->
+    <th:block th:insert="commons/common::header"/>
+
+    <!--메인영역-->
+    <main>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <a href="#">
+                        <div class="text-wrap">
+                            <h2>매일 삶습니다</h2>
+                            <p>내 가족이 먹는다는 생각으로</p>
+                        </div>
+                        <img src="/img/img_main/slide_main1.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </main>
+    <script src="/js/custom.js"></script>
+    <!--푸터영역-->
+    <th:block th:insert="commons/common::footer"/>
+</body>
+</html>
