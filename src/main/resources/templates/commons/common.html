@@ -5,14 +5,13 @@
     <title>본향족발</title>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <!-- 헤더 -->
 <header th:fragment="header">
     <!-- 네비바 -->
-    <nav class="navbar">
+    <nav class="navbar_wrap">
         <!-- 네비바_로고 -->
         <div class="nav_logo">
             <a href="/"><img src="/img/img_main/nav_logo.png" alt="#"></a>
@@ -20,37 +19,37 @@
         <!-- 네비바_카테고리&버튼 -->
         <div class="nav_cnb">
             <ul class="nav_category">
-                <li>ourStory</li>
-                <li>aboutUs</li>
-                <li>Menu</li>
-                <li>Instagram</li>
-                <li>ㅣ</li>
+                <li><a href="#">본향이야기</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">메뉴판</a></li>
+                <li><a href="#">본향SNS</a></li>
+                <li>｜</li>
             </ul>
             <div class="nav_btn">
-                <button id="btn_log"><a href="/commons/signin">로그인</a></button>
+                <a href="/commons/signin"><button id="btn_log">로그인</button></a>
                 <button id="btn_order">주문하기</button>
             </div>
-
         </div>
-        </nav>
+    </nav>
 </header>
 
 <!-- 푸터 -->
 <footer th:fragment="footer">
-    <div class="foot_cont">
-        <div class="foot_left">
-            <h3>본향족발 전화주문</h3>
-            <p><strong>070-000-0000 ㅣ</strong> 영업시간 11:00 - 23:00</p>
-            <ul class="foot_info">
-                <li>주소: 경기도 양주시 덕계동</li>
-                <li>사업자번호: 000-00-00000</li>
-                <li>대표자: choi동1</li>
-                <li>COPYRIGHT(C)2022.본향족발.ALL RIGHTS RESERVED</li>
-            </ul>
-        </div>
-        <div class="foot_right">
-            <h3>본향족발 SNS</h3>
-        </div>
+    <div class="foot_left">
+        <h3>｜본향족발 전화주문</h3>
+        <p><strong>070-000-0000 </strong> ｜영업시간 11:00 - 23:00</p>
+        <ul class="foot_info">
+            <li>주소: 경기도 양주시 덕계동</li>
+            <li>사업자번호: 000-00-00000</li>
+            <li>대표자: choi동1</li>
+            <li>COPYRIGHT(C)2022.본향족발.ALL RIGHTS RESERVED</li>
+        </ul>
+    </div>
+    <div class="foot_right">
+        <h3>｜본향족발 SNS</h3>
+        <a href="#">인스타</a>
+        <a href="#">블로그</a>
+        <a href="#">카카오톡</a>
     </div>
 </footer>
 </body>

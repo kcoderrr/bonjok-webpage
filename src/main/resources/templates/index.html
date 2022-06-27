@@ -10,7 +10,7 @@
 
     <!--메인영역-->
     <main>
-        <!-- Slider main container -->
+        <!-- 슬라이드 배너 -->
         <div class="swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -32,14 +32,53 @@
             <div class="swiper-pagination"></div>
 
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"><</div>
+            <div class="swiper-button-next">></div>
 
             <!-- If we need scrollbar -->
             <div class="swiper-scrollbar"></div>
         </div>
+        <!--여백-->
+        <div class="white_space"></div>
+
+        <!--이벤트영역-->
+        <div class="event_wrap">
+            <div class="event_title">
+                <span>본향족발 이벤트</span>
+                <hr class="sub_line">
+            </div>
+        </div>
+
+        <!--여백-->
+        <div class="white_space"></div>
+
+        <!--리뷰영역-->
+        <div class="review_wrap">
+            <div class="review_title">
+                <span>본향족발 리뷰</span>
+                <hr class="sub_line">
+            </div>
+            <!--리뷰이미지-->
+            <div class="review_img">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!--여백-->
+        <div class="white_space"></div>
+
+
+
     </main>
     <script src="/js/custom.js"></script>
+
+
+
+
+
     <!--푸터영역-->
     <th:block th:insert="commons/common::footer"/>
 </body>
