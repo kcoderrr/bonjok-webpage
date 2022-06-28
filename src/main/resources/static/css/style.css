@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Batang&family=Sunflower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+
 
 * {
     list-style: none;
@@ -186,6 +188,7 @@ header {
 }
 /*이벤트영역*/
 .event_wrap {
+    width: 1280px;
     justify-content: center;
     text-align: center;
 }
@@ -226,21 +229,19 @@ header {
 
 /*푸터*/
 footer {
-    font-family: "Arial Black";
+    font-family: 'Noto Sans KR', sans-serif;
     background-color: black;
     display: flex;
     color: white;
     padding: 20px 0;
+    font-size: 13px;
 }
 
 footer a {
     color: white;
-}
+}*
 
 /*footer_left*/
-footer{
-    font-size: 13px;
-}
 .foot_left {
     left: 0;
     width: 40%;

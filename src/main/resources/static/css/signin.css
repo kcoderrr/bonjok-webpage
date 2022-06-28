@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+
 /*로고영역*/
-main {
-    ;
+* {
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 .logo_wrap {
@@ -13,11 +15,11 @@ main {
 .login_wrap {
     width: 450px;
     position: relative;
-    margin: 20px auto;
+    margin: 40px auto 0;
     text-align: center;
     font-family: 'Sunflower', sans-serif;
     padding: 35px 0 20px;
-    border: 1px solid #000000;
+    border: 1px solid #9a9a9a;
     border-radius: 10px;
 }
 
@@ -72,4 +74,12 @@ main {
 .login_option span {
     font-size: 13px;
     color: #9a9a9a;
+}
+
+/*푸터영역*/
+footer {
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    color: black;
 }
