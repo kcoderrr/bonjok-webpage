@@ -10,17 +10,15 @@ import javax.servlet.http.HttpSession;
 
 
 @Controller
-@RequestMapping("/commons")
 public class CommonController {
 
-    @GetMapping("signin")
-    public String signin() {
-        return "./commons/signin";
+    @GetMapping("/signup")
+    public String singup() {
+        return "view/commons/signup";
     }
 
-    @PostMapping("signin")
-    public String signin(Model model) {
-        return "";
+    @GetMapping("/signin")
+    public String singin() {
+        return "view/commons/signin";
     }
-
 }

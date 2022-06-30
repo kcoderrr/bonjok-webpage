@@ -241,6 +241,11 @@ footer a {
 footer{
     font-size: 13px;
 }
+
+.foot_wrap {
+    width:1280px;
+}
+
 .foot_left {
     left: 0;
     width: 40%;
