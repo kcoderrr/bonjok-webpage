@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <th:block th:insert="commons/common::head" />
+  <link rel="stylesheet" href="/css/signin.css">
+</head>
+<body>
+<!--헤더 여백영역-->
+<div class="white_top"></div>
+
+<!--메인영역-->
+<main>
+  <!--로고영역-->
+  <div class="logo_wrap">
+    <a href="/static"><img src="/img/img_main/nav_logo.png"></a>
+  </div>
+  <!--로그인영역-->
+  <div class="login_wrap">
+    <form action="/view/commons/signin" method="post">
+      <div class="id_pw_wrap">
+        <div class="id_wrap">
+          <i></i>
+          <input type="text" id="log_id" name="id" placeholder="아이디">
+        </div>
+        <div class="pw_wrap">
+          <input type="password" id="log_pass" name="pass" placeholder="비밀번호">
+        </div>
+      </div>
+      <button id="bnt_login">로그인</button>
+    </form>
+  </div>
+
+
+</main>
+
+<!--푸터영역-->
+<th:block th:insert="commons/common::footer"/>
+</body>
+</html>
