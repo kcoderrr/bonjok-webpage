@@ -13,6 +13,10 @@ public class IndexController {
         return "index";
     }
 
+    @GetMapping("/posts/write")
+    public String postsWrite() {
+        return "posts-write";
+    }
     @GetMapping("/posts/save")
     public String postsSave() {
         return "posts-save";
