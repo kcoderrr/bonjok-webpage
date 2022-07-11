@@ -27,7 +27,13 @@
                 <li>｜</li>
             </ul>
             <div class="nav_btn">
-                <a href="/view/commons/signin"><button id="btn_log">로그인</button></a>
+                {{#userName}}
+                    <span id="user">{{userName}}</span>님
+                    <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+                {{/userName}}
+                {{^userName}}
+                    <a href="/mem/signin"><button id="btn_log">로그인</button></a>
+                {{/userName}}
                 <button id="btn_order">주문하기</button>
             </div>
         </div>

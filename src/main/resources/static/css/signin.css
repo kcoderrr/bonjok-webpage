@@ -5,6 +5,10 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 .logo_wrap {
     position: relative;
     text-align: center;
@@ -19,24 +23,8 @@
     text-align: center;
     font-family: 'Sunflower', sans-serif;
     padding: 35px 0 20px;
-    border: 1px solid #9a9a9a;
-    border-radius: 10px;
 }
 
-.id_wrap {
-    width: 350px;
-    padding: 14px 17px 13px;
-    border: 1px solid #9a9a9a;
-    border-radius: 6px 6px 0 0;
-}
-
-.pw_wrap {
-    width: 350px;
-    padding: 14px 17px 13px;
-    border: 1px solid #9a9a9a;
-    border-radius: 0 0 6px 6px;
-    border-top-width: 0;
-}
 
 #log_id, #log_pass {
     width:100%;
@@ -44,37 +32,39 @@
     border: none;
 }
 
-#bnt_login {
+/*로그인 버튼*/
+.btn {
+    display: block;
+    align-items: flex-start;
+    margin: 0 auto;
+    width:386px;
+    font-weight: bolder;
     color:#ffffff;
     font-size: 18px;
     margin-top: 15px;
-    width:386px;
     height: 50px;
     border: none;
     border-radius: 10px;
-    background-color: #D11515;
+    line-height: 50px;
 }
 
-#bnt_login:hover {
-    background-color: #9f1010;
-    cursor: pointer;
+.glogin {
+    color: #4285f4;
+    background-color: #ffffff;
+    border: 2px solid #e3e3e3;
 }
 
-/*다른 로그인 옵션*/
-.login_option {
-    margin: 10px 0 5px;
-    color: black;
+.nlogin {
+    background-color: #1EC800;
+    border: 2px solid #1EC800;
 }
 
-.login_option a{
-    color: black;
-    font-size: 13px;
+.klogin {
+    background-color: #FEE500;
+    border: 2px solid #FEE500;
 }
 
-.login_option span {
-    font-size: 13px;
-    color: #9a9a9a;
-}
+.btn:hover {cursor: pointer;}
 
 /*푸터영역*/
 footer {
