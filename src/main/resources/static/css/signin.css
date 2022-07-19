@@ -15,6 +15,11 @@ a {
     margin-top: 110px;
 }
 
+.logo_wrap img {
+    width: 200px;
+}
+
+
 /*로그인영역*/
 .login_wrap {
     width: 450px;
@@ -37,31 +42,15 @@ a {
     display: block;
     align-items: flex-start;
     margin: 0 auto;
-    width:386px;
-    font-weight: bolder;
+    width:400px;
     color:#ffffff;
     font-size: 18px;
     margin-top: 15px;
-    height: 50px;
     border: none;
-    border-radius: 10px;
-    line-height: 50px;
 }
 
-.glogin {
-    color: #4285f4;
-    background-color: #ffffff;
-    border: 2px solid #e3e3e3;
-}
-
-.nlogin {
-    background-color: #1EC800;
-    border: 2px solid #1EC800;
-}
-
-.klogin {
-    background-color: #FEE500;
-    border: 2px solid #FEE500;
+.login_wrap a img {
+    width: 100%;
 }
 
 .btn:hover {cursor: pointer;}

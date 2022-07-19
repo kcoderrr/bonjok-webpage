@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+>
+<head th:replace="fragments/header::head"></head>
+<body>
+<!-- 헤더 -->
+<header th:replace="fragments/header::header"></header>
+
+<main class="post_list_wrap">
+    <div class="posts_white_space"></div>
+    <div class="list_top">
+        <div class="list_top_left">
+            <h1>｜본향 게시판</h1>
+        </div>
+        <div class="list_top_right">
+            <a href="/posts/save" role="button" class="btn btn-primary post_save_btn">글쓰기</a>
+        </div>
+    </div>
+    <div class="list_wrap">
+
+        <br>
+        <!-- 목록 출력 영역 -->
+        <table class="list_table">
+            <colgroup>
+                <col width="70">
+                <col width="*">
+                <col width="110">
+                <col width="110">
+            </colgroup>
+            <thead class="thead-strong">
+            <tr>
+                <th id="list_no">NO.</th>
+                <th>TITLE</th>
+                <th>NAME</th>
+                <th id="list_date">DATE</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+            <!--반복문-->
+                <tr th:each=" p: ${posts}">
+                    <td th:text="${p.id}">id</td>
+                    <td><a th:href="|/posts/detail/${p.id}|" th:text="${p.title}">{{title}}</a></td>
+                    <td th:text="${userName}">{{author}}</td>
+                    <td>
+                        <span th:text="${#temporals.format(p.modifiedDate, 'yyyy-MM-dd')}">생성날짜</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<hr class="footer_hr">
+<!--푸터-->
+<footer th:replace="fragments/footer::footer"></footer>
+<!--index.js 추가-->
+<script src="/js/app/index.js"></script>
+<!--custom.js 추가-->
+<script src="/js/custom.js"></script>
+
+</body>
+</html>

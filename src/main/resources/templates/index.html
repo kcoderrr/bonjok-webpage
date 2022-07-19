@@ -1,8 +1,14 @@
-{{>layout/header}}
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header::head"></head>
+<body>
+<!-- 헤더 -->
+<header th:replace="fragments/header::header"></header>
 
     <!--메인영역-->
     <main>
         <!-- 슬라이드 배너 -->
+
         <div class="swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -52,8 +58,9 @@
         <!--이벤트영역-->
         <div class="event_wrap">
             <div class="event_title">
-                <span>본향족발 이벤트</span>
+                <span>EVENT</span>
                 <hr class="sub_line">
+                <img src="/img/img_main/event1.png">
             </div>
         </div>
 
@@ -63,7 +70,7 @@
         <!--리뷰영역-->
         <div class="review_wrap">
             <div class="review_title">
-                <span>본향족발 리뷰</span>
+                <span>REVIEW</span>
                 <hr class="sub_line">
             </div>
             <!--리뷰이미지-->
@@ -77,5 +84,14 @@
 
         <!--여백-->
         <div class="white_space"></div>
+    </main>
+<hr class="footer_hr">
+<!--푸터-->
+<footer th:replace="fragments/footer::footer"></footer>
+<!--index.js 추가-->
+<script src="/js/app/index.js"></script>
+<!--custom.js 추가-->
+<script src="/js/custom.js"></script>
 
-{{>layout/footer}}
+</body>
+</html>

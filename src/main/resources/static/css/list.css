@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+
+* {
+    margin: 0 auto;
+}
+
+/*타이틀*/
+.list_title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/*게시판*/
+table {
+    width: 100%;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+}
+th, td {
+    border-bottom: 1px solid #444444;
+    border-left: 1px solid #444444;
+    padding: 10px;
+}
+th:first-child, td:first-child {
+    border-left: none;
+}
+
+.list_wrap {
+    width: 980px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.save-wrap {
+    float: right;
+}
+
+.post_save_btn {
+
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: black;
+}
+
+/*게시판리스트*/
+.list_table {
+    margin-top: 20px;
+}
+
+#list_no, #list_date {
+    width: 100px;
+}

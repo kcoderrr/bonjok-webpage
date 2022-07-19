@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+>
+<head th:replace="fragments/header::head"></head>
+<body>
+<!-- 헤더 -->
+<header th:replace="fragments/header::header"></header>
+
+<div>
+
+    <div th:each="p:${post}">
+            <div class="form-group">
+                <label for="id">글 번호</label>
+                <input type="text" class="form-control" id="id" th:text="${p.id}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="title">제목</label>
+                <input type="text" class="form-control" id="title" value="{{post.title}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="author"> 작성자 </label>
+                <input type="text" class="form-control" id="author" value="{{post.author}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="content"> 내용 </label>
+                <textarea class="form-control" id="content" readonly>{{post.content}}</textarea>
+            </div>
+        <a href="/posts/list" role="button" class="btn btn-secondary">목록으로</a>
+    </div>
+</div>
+
+<hr class="footer_hr">
+<!--푸터-->
+<footer th:replace="fragments/footer::footer"></footer>
+<!--index.js 추가-->
+<script src="/js/app/index.js"></script>
+<!--custom.js 추가-->
+<script src="/js/custom.js"></script>
+
+</body>
+</html>

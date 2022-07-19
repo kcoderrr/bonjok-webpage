@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+th:replace="~{layout/layout-admin :: layout(~{::head}, ~{::main})}">
+<head>
+    
+</head>
+<main>
+	<h1>비주얼이미지 리스트</h1>
+	<div class="wrap">
+		<p>비주얼 이미지 리스트 페이지</p>
+		<table>
+			<thead>
+				<tr>
+					<td>관리번호</td>
+					<td>이미지</td>
+					<td>타이틀</td>
+					<td>서브타이틀</td>
+					<td>적용여부</td>	
+					<td>순서</td>
+					<td>관리</td>	
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="dto, i:${list}">
+					<td class="vno">[[${dto.vno}]]</td>
+					<td>
+						<img th:src="${dto.url+dto.orgName}" height="100px">
+					</td>
+					<td><input type="text" th:value="${dto.title}" disabled></td>
+					<td><input type="text" th:value="${dto.sub}" readonly></td>
+					<td>
+						<label th:for="|cb-isShow-${i.count}|">적용 됨</label>
+						<input th:id="|cb-isShow-${i.count}|" class="cb-isShow" type="checkbox"  th:checked="${dto.isShow}">
+					</td>	
+					<td>[[${dto.num}]]</td>
+					<td>
+						<button type="button">삭제</button>
+					</td>			
+				</tr>
+			</tbody>
+		</table>
+		<script type="text/javascript">
+			$(function(){
+				$(".cb-isShow").change(function(){
+					//alert($(this).attr("checked"));
+					var vno=$(this).parents("tr").find(".vno").text();
+					var isShow=$(this).prop("checked");//true or false
+					
+					var token = $("meta[name='_csrf']").attr("content");
+	    			var header = $("meta[name='_csrf_header']").attr("content");
+	    			$.ajax({
+	    				beforeSend: function(xhr){xhr.setRequestHeader(header, token);},
+						url:"/common/visuals/"+vno+"/isShow",
+						type:"post",
+						data: {"isShow": isShow},
+						success: function(result){
+							if(result){
+								alert("수정완료");
+							}
+						}
+					});
+				});
+				
+			});
+		</script>
+	</div>
+</main>
+</html>

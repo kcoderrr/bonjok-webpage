@@ -35,7 +35,7 @@ public class IndexController {
         if(user != null) {
             model.addAttribute("userName",user.getName());
         }
-        return "posts-list";
+        return "/posts/posts-list";
     }
 
     @GetMapping("/posts/save")
@@ -44,7 +44,17 @@ public class IndexController {
         if(user != null) {
             model.addAttribute("userName",user.getName());
         }
-        return "posts-save";
+        return "/posts/posts-save";
+    }
+
+    @GetMapping("/posts/detail/{id}")
+    public String postsDetail(@PathVariable Long id, Model model, @LoginUser SessionUser user) {
+        PostsResponseDto dto = postsService.findById(id);
+        model.addAttribute("post", dto);
+        if(user != null) {
+            model.addAttribute("userName",user.getName());
+        }
+        return "/posts/posts-detail";
     }
 
     @GetMapping("/posts/update/{id}")
@@ -54,7 +64,7 @@ public class IndexController {
         if(user != null) {
             model.addAttribute("userName",user.getName());
         }
-        return "posts-update";
+        return "/posts/posts-update";
     }
 
 

@@ -1,4 +1,11 @@
-{{>layout/header}}
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+>
+<head th:replace="fragments/header::head"></head>
+<body>
+<!-- 헤더 -->
+<header th:replace="fragments/header::header"></header>
 
 <h1>게시글 수정</h1>
 
@@ -22,10 +29,19 @@
                 <textarea class="form-control" id="content">{{post.content}}</textarea>
             </div>
         </form>
-        <a href="/" role="button" class="btn btn-secondary">취소</a>
+        <a href="/posts/list" role="button" class="btn btn-secondary">목록</a>
         <button type="button" class="btn btn-primary" id="btn-update">수정 완료</button>
         <button type="button" class="btn btn-danger" id="btn-delete">삭제</button>
     </div>
 </div>
 
-{{>layout/footer}}
+<hr class="footer_hr">
+<!--푸터-->
+<footer th:replace="fragments/footer::footer"></footer>
+<!--index.js 추가-->
+<script src="/js/app/index.js"></script>
+<!--custom.js 추가-->
+<script src="/js/custom.js"></script>
+
+</body>
+</html>

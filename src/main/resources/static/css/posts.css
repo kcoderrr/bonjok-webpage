@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+
+* {
+    margin: 0 auto;
+}
+
+/*타이틀*/
+.post_list_wrap {
+    width: 750px;
+}
+
+.posts_white_space {
+    margin-top: 80px;
+}
+
+.list_top {
+    display: flex;
+}
+
+.list_top_left {
+    margin-left: 0;
+}
+
+.list_top_right {
+    margin-right: 0;
+    margin-top: 12px;
+}
+
+.list_top_left>h1 {
+    font-size: 23px;
+    float: left;
+    margin-bottom: 5px;
+}
+
+
+
+/*게시판*/
+table {
+    width: 100%;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+}
+th, td {
+    border-bottom: 1px solid #444444;
+    border-left: 1px solid #444444;
+    padding: 10px;
+    font-size: 14px;
+}
+th:first-child, td:first-child {
+    border-left: none;
+}
+
+.list_wrap {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.save-wrap {
+    float: right;
+    margin-right: 0;
+    vertical-align: middle;
+}
+
+.post_save_btn {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: black;
+}
+
+.post_save_btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/*게시판리스트*/
+#list_no, #list_date {
+    width: 100px;
+}
+
+/*게시글 저장*/
+.save_title {
+    width: 700px;
+    font-size: 23px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.save_wrap {
+    width: 700px;
+}
+
+.save_form {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.save_user {
+    width: 700px;
+    border: 1px solid #000000;
+}
+
+.save_form > input, textarea {
+    margin-top: 5px;
+    width: 680px;
+    font-size: 16px;
+    padding: 7px 10px;
+}
+
+.save_cnb {
+    float: right;
+    margin-top: 10px;
+}
+
+#btn-list, #btn-save  {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: black;
+}
+
+#btn-save {
+    margin-left: 5px;
+}

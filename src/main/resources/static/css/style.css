@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Batang&family=Sunflower&display=swap');
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     list-style: none;
-    font-family: 'Gowun Batang', serif;
-    font-weight: bold;
+    font-family: 'SUIT-Medium';
     margin: 0 auto;
 }
 
@@ -15,20 +19,30 @@ a {
     text-decoration: none;
 }
 
+main {
+    min-height: 70vh;
+}
 /*헤더*/
-
+.top_white{
+    height: 92px;
+}
 /*네비바*/
 .navbar_wrap {
-    width: 1280px;
+    font-weight: bolder;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.26);
+    position: fixed;
     margin: 0 auto;
     display: flex;
     align-items: center;
     padding: 10px 0;
     justify-content: space-between;
+    z-index: 100;
+    width: 100%;
+    background-color: white;
 }
 
 .navbar_wrap a {
-    color: black;
+    color: #464646;
 }
 
 .nav_cnb {
@@ -45,17 +59,19 @@ a {
     margin:0;
     text-transform:uppercase;
     padding: 8px 15px;
-    font-size: 1.17em;
+    font-size: 1.05em;
+    font-weight: 300;
     margin-bottom: 2px;
 }
 
 .nav_category li:not(:last-child):after {
     display:block;
     content: '';
-    border-bottom: solid 3px #D11515;
+    border-bottom: solid 2px #418613;
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
     padding-top: 2px;
+    margin-left: 2px;
 }
 
 .nav_category li:not(:last-child):hover:after {transform: scaleX(1);}
@@ -63,7 +79,22 @@ a {
 /*네비바-버튼*/
 .nav_btn {
     padding-bottom: 5px;
+    display: flex;
+    align-items: center;
 }
+
+.nav_btn div {
+    margin-right: 10px;
+}
+
+.btn-info {
+    margin-left: 5px;
+}
+
+.btn-info:hover {
+    color: #868686;
+}
+
 #btn_log {
     font-size: 16px;
     width:80px;
@@ -74,12 +105,8 @@ a {
 }
 
 #btn_log:hover {
-    background-color: black;
+    background-color: #464646;
     color:white;
-}
-
-.nav_btn:hover a {
-    color: white;
 }
 
 #btn_order {
@@ -88,13 +115,13 @@ a {
     height: 40px;
     border-radius: 20px;
     border: 0px;
-    background-color: #D11515;
+    background-color: #418613;
     color: #fff;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 #btn_order:hover {
-    background-color: #9f1010;
+    background-color: #2d5d0d;
     cursor:pointer;
 }
 
@@ -139,7 +166,7 @@ a {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: black;
+    background-color: #464646;
     width: 80px;
 }
 
@@ -188,12 +215,17 @@ a {
     justify-content: center;
     text-align: center;
 }
+
+.event_wrap {
+
+}
+
 .event_title span {
     font-size: 30px;
 }
 
 .event_title hr {
-    width: 240px;
+    width: 130px;
 }
 
 /*리뷰영역*/
@@ -207,7 +239,7 @@ a {
 }
 
 .review_title hr {
-    width: 210px;
+    width: 150px;
 }
 
 
@@ -225,21 +257,25 @@ a {
 
 /*푸터*/
 footer {
+    width: 100%;
     font-family: "Arial Black";
-    background-color: black;
     display: flex;
-    color: white;
+    color: #464646;
     padding: 20px 0;
+    font-size: 13px;
 }
 
 footer a {
     color: white;
 }
 
-/*footer_left*/
-footer{
-    font-size: 13px;
+.footer_hr {
+    width: 1280px;
+    height: 2px;
+    background-color: #418613;
+    border:0px
 }
+/*footer_left*/
 
 .foot_wrap {
     width:1280px;
@@ -281,7 +317,7 @@ footer{
 
 .sub_line {
     height: 20px;
-    background-color: #D11515;
+    background-color: #418613;
     margin: 0 auto 40px;
     border: 0;
 }
